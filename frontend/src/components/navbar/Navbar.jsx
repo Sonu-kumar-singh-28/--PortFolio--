@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa";
 function Navbar() {
 
   const navItems = [
+
     {
       name: "Home",
       id: "home",
@@ -22,6 +23,11 @@ function Navbar() {
     {
       name: "Projects",
       id: "projects",
+    },
+
+    {
+      name: "Experience",
+      id: "experience",
     },
 
     {
@@ -61,17 +67,20 @@ function Navbar() {
 
           {/* TOP LIGHT */}
 
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-cyan-400/5" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-blue-500/5" />
 
           {/* CONTENT */}
 
           <div className="relative flex items-center justify-between px-6 lg:px-10 py-5">
 
-            {/* LEFT */}
+            {/* LOGO */}
 
-            <div>
+            <div
+              onClick={() => scrollToSection("home")}
+              className="cursor-pointer"
+            >
 
-              <h1 className="text-xl md:text-2xl font-black tracking-[0.2em] uppercase font-['Space_Grotesk'] bg-gradient-to-r from-white via-blue-100 to-blue-400 bg-clip-text text-transparent">
+              <h1 className="text-xl md:text-2xl font-black tracking-[0.2em] uppercase font-['Space_Grotesk'] bg-gradient-to-r from-white via-cyan-200 to-blue-400 bg-clip-text text-transparent">
 
                 PORTFOLIO
 
@@ -79,7 +88,7 @@ function Navbar() {
 
             </div>
 
-            {/* CENTER */}
+            {/* NAV ITEMS */}
 
             <ul className="hidden lg:flex items-center gap-10">
 
@@ -95,7 +104,7 @@ function Navbar() {
 
                   {/* HOVER LINE */}
 
-                  <span className="absolute left-0 -bottom-2 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute left-0 -bottom-2 w-0 h-[2px] bg-cyan-400 transition-all duration-300 group-hover:w-full" />
 
                 </li>
 
@@ -109,9 +118,15 @@ function Navbar() {
 
               {/* STATUS */}
 
-              <div className="hidden md:flex items-center gap-3 px-4 py-2 rounded-2xl border border-white/10 bg-white/5 text-sm text-slate-300">
+              <div className="hidden md:flex items-center gap-3 px-5 py-2.5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl text-sm text-slate-300 shadow-[0_0_20px_rgba(34,211,238,0.08)]">
 
-                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                <span className="relative flex h-3 w-3">
+
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-400" />
+
+                </span>
 
                 Available For Work
 
@@ -119,7 +134,7 @@ function Navbar() {
 
               {/* MOBILE MENU */}
 
-              <button className="lg:hidden w-11 h-11 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center text-white text-lg hover:border-blue-400 transition-all duration-300">
+              <button className="lg:hidden w-11 h-11 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center text-white text-lg hover:border-cyan-400 transition-all duration-300">
 
                 <FaBars />
 

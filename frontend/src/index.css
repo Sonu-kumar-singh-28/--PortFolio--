@@ -114,3 +114,7 @@ body{
   background:#2563EB;
   border-radius:20px;
 }
+
+html {
+  scroll-behavior: smooth;
+}

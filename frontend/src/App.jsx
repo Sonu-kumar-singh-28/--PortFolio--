@@ -4,6 +4,12 @@ import Hero from "./sections/Hero/Hero";
 import About from "./sections/About/About";
 import Skills from "./sections/Skills/Skills";
 import Projects from "./sections/Projects/Projects";
+import Contact from "./sections/Contact/Contact";
+import Experience from "./sections/Experience/Experience";
+
+import { Toaster } from "react-hot-toast";
+
+<Toaster position="top-right" />
 
 function App() {
 
@@ -38,6 +44,10 @@ function App() {
       <Skills />
 
       <Projects />
+
+      <Experience />
+
+      <Contact />
 
     </main>
   );
